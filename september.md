@@ -1,5 +1,73 @@
-#Tisdag 6/9
-Sekreterare: Alexander med lite Loke
+# Fredag 9/9
+Antecknare: Loke
+
+**kom ihåg att byta text language från plain text till html i nedre högra hörnet när du arbetar med njk filer.**
+
+**Components ska börja med “_” t.ex. “_nav.njk” för att visa att det är en component alltså en del av en sida.**
+
+## index.js
+
+Skapa en ny route
+
+```js
+router.get(‘/test’, function(request, response) {
+ response.render(‘test.njk’, {
+ title: ‘kursdemo’});
+})
+```
+
+## test.njk
+
+```html
+{%extends “layout.njk” %}
+{%block content %}
+ <h1>{{ title }}</h1>
+{% endblock %}%
+```
+
+**views > gör map som heter “components” > fil “_nav.njk”**
+
+## nav.njk
+
+```html
+<nav>
+ Sidnavigation
+ <a href=”/”>Hem</a>
+ <a href=”test”>Test</a>
+</nav>
+```
+
+## layout.njk
+
+lägg till “{% include “components/_nav.njk” %}” och “{% include “components/_footer.njk” %}” I body
+
+```html
+ {% include "components/_nav.njk" %}
+ {% block content %}
+ {% endblock %}
+```
+
+## Bilder
+
+public > skapa images folder
+
+components > skappa _footer.njk
+
+```html
+<footer>
+ Din valfria text där du får skriva vad du vill :)🍔
+</footer>
+```
+
+## Om du vill stänga dina servrar
+
+```bash
+sudo killall npm
+```
+
+
+# Tisdag 6/9
+Antecknare: Alexander med lite Loke
 * Hell yeah
 * Konfigurationsfiler eller gömda filer börjar med en . [punkt]
 * npm = node packet manager (first install)
