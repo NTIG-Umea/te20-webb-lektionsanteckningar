@@ -8,4 +8,4 @@ Du kommer att behöva forka detta repo/klona det, så att du kan göra en pull r
 
 # Markdown tips
 
-Fråga @jensnti efter den lilla gröna boken.
+Fråga Jens efter den lilla gröna boken.
