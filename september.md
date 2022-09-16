@@ -1,3 +1,24 @@
+# Fredag 16/9
+Antecknare: Rasmus
+
+MySQL
+* Installera MySQL genom att följa [Jens guide](https://www.jensa.xyz/posts/webbserver-programmering/#mysql) 
+* Ta bort MySQL användare genom kommandot ```DROP user 'username'@'localhost'``` ifall det behövs
+* Glöm inte semikolon
+* TablePlus
+  * ```Create a new connection```
+    * MySQL
+      * Anslut till localhost genom att skriva in ```localhost``` i Host fältet
+      * Använd ditt MySQL användarnamn och lösenord för att skapa anslutningen
+  * Högerklicka demo tabellen i TE20 databasen och exportera sedan som en .SQL 
+  * Anslut till localhost användaren
+  * Tryck på ```Show databases list``` och anslut till webbserver databasen du gjorde tidigare
+  * ```Menu``` > ```File``` > ```Import``` > ```From SQL Dump``` > Välj SQL Dump filen > ```Import```
+  * Välj ```Structure``` för att ändra och lägga till kolumner
+  * Skapa en ny kolumn kallad "age" och ange den data typen ```int unsigned```, ```unsigned``` betyder att det inte kan vara negativt
+* Ändra i .env så att den ansluter till localhost, kommentera ut den gammla anslutningen
+* Uppdatera ```index.njk``` så att den visar de nya kolumnerna
+
 # Fredag 9/9
 Antecknare: Loke
 
@@ -109,4 +130,3 @@ Tableplus
 
 ඞ Efter rast fixade vi id, namn, secret_identity och bio.
 Gör css och fixa index 👍
-
