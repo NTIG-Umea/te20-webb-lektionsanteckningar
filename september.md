@@ -8,6 +8,8 @@ Anteckningar: Noah
 
 ### Övnings uppgift
 Hitta en simple java cod man skrivit tidigare och gör om uppgiften till javascript helst någon som innehåller loops och variabler
+
+Jens repository finns länkat på classroom v38 Tisdag JS Syntax där du kan hitta uppgifterna som gjorts samt en ogjord som används som övningsuppgift
 ### Jens exempel "bussbiljet Javascript"
 int finns inte så blir let x = ParseInt(prompt('message')); ParseInt tvingar let att tolkas som en int istället för en string (rekommenderas av Jens så att koden tolkas som den ska)
 
@@ -50,7 +52,7 @@ const message messageBox = document.quarySelector('#message-box');
 message.textContent = 'omkrets är $(circumference)cm';
 messageBox.appendchild(message);
 ```
-* koden är inte färdig furmulerad så får gå in och titta bland Jens repositaries (Simons cirkel) för att se den färdiga koden.
+* koden är inte färdig furmulerad så får gå in och titta bland Jens repositaries (finns länkat i classroom v38 Tisdag JS Syntax. Filen är är Simons.js) för att se den färdiga koden.
 
 ## Funktioner
 DOM = Dokument Object Model
