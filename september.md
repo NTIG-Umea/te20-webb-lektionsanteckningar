@@ -1,3 +1,98 @@
+
+# Tisdag 20/9
+Anteckningar: Noah
+
+## Syntax
+
+## Logic
+
+### Övnings uppgift
+Hitta en simple java cod man skrivit tidigare och gör om uppgiften till javascript helst någon som innehåller loops och variabler
+
+Jens repository finns länkat på classroom v38 Tisdag JS Syntax där du kan hitta uppgifterna som gjorts samt en ogjord som används som övningsuppgift
+* tricket med uppgiften är att man måste ha två stycken input
+
+### Övnings uppgift #2
+Gör en input där du kan vända bak och fram på input'ens text 
+
+#### Kommandon jämförelser java till js
+```js
+//for loop
+for (let i = 0; i <name.lenght; i++){
+  console.log(name[i]); // Uppgift: hur ska det bli baklänges som en li (list)
+}
+// int
+let x = 5;
+//konstant
+const y = 'hejsan svesans';
+//skapa en user-list
+const ul = document.createElement('ul');
+//skapa en lista
+const li = document.createElement('li');
+
+//Kommand som kan vara till hjälp till uppgift på andra passet
+li.textContent = BOKSTAVEN;
+ul.appendChild(li);
+messageBox.appendChild(ul);
+
+console.log(x); //x kan bytas ut baserat på vad man vill titta. Används alltså för att titta så att kommandon lagras som dem ska
+```
+### Jens exempel "bussbiljet Javascript"
+int finns inte så blir let x = ParseInt(prompt('message')); ParseInt tvingar let att tolkas som en int istället för en string (rekommenderas av Jens så att koden tolkas som den ska)
+
+Det kan bli problem med < och > på grund av hur = fungerar med javascript exempel
+
+4 == '4' blir "true"
+
+4 ===  '4' blir "false"
+
+
+```js
+let x = ParseInt(prompt('message'));
+
+if (x < y) {
+  alert ('message')
+}
+
+else if ('x < z'){
+  alert ('message')
+}
+```
+### Jens exempel "kalk Omkrets & radie till Javascript"
+```js
+const radie = document.getElementById('input-field')
+
+const button = document.quarySelect
+
+// Ett modärnare exempel skulle vara document.quarySelector('#input-field')
+
+//Om man använder parseInt där innehållet inte kan vara en int så kommer man få upp en error NaN (Not a Number)
+
+const radius = radiusImput.value;
+
+const area = Math.PI * radius * radius;
+
+const circumference = 2 * math.PI * radius;
+
+const message messageBox = document.quarySelector('#message-box');
+
+message.textContent = 'omkrets är $(circumference)cm';
+messageBox.appendchild(message);
+```
+* koden är inte färdig furmulerad så får gå in och titta bland Jens repositaries (finns länkat i classroom v38 Tisdag JS Syntax. Filen är är Simons.js) för att se den färdiga koden.
+
+## Funktioner
+DOM = Dokument Object Model
+
+Exempel på vad DOM står för
+* .H1
+* .Body
+
+DOM kan sammanfattas som .css element och de elemt man skriver för styling
+
+## Jens slutsatser
+Använd konsolen i webbläsaren för att felsöka när du stöter på problem
+
 # Fredag 16/9
 Antecknare: Rasmus
 
