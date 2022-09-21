@@ -10,6 +10,33 @@ Anteckningar: Noah
 Hitta en simple java cod man skrivit tidigare och gör om uppgiften till javascript helst någon som innehåller loops och variabler
 
 Jens repository finns länkat på classroom v38 Tisdag JS Syntax där du kan hitta uppgifterna som gjorts samt en ogjord som används som övningsuppgift
+* tricket med uppgiften är att man måste ha två stycken input
+
+### Övnings uppgift #2
+Gör en input där du kan vända bak och fram på input'ens text 
+
+#### Kommandon jämförelser java till js
+```js
+//for loop
+for (let i = 0; i <name.lenght; i++){
+  console.log(name[i]); // Uppgift: hur ska det bli baklänges som en li (list)
+}
+// int
+let x = 5;
+//konstant
+const y = 'hejsan svesans';
+//skapa en user-list
+const ul = document.createElement('ul');
+//skapa en lista
+const li = document.createElement('li');
+
+//Kommand som kan vara till hjälp till uppgift på andra passet
+li.textContent = BOKSTAVEN;
+ul.appendChild(li);
+messageBox.appendChild(ul);
+
+console.log(x); //x kan bytas ut baserat på vad man vill titta. Används alltså för att titta så att kommandon lagras som dem ska
+```
 ### Jens exempel "bussbiljet Javascript"
 int finns inte så blir let x = ParseInt(prompt('message')); ParseInt tvingar let att tolkas som en int istället för en string (rekommenderas av Jens så att koden tolkas som den ska)
 
@@ -62,6 +89,9 @@ Exempel på vad DOM står för
 * .Body
 
 DOM kan sammanfattas som .css element och de elemt man skriver för styling
+
+## Jens slutsatser
+Använd konsolen i webbläsaren för att felsöka när du stöter på problem
 
 # Fredag 16/9
 Antecknare: Rasmus
