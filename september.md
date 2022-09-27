@@ -1,3 +1,57 @@
+# Tisdag 27/9
+Anteckningar: Leo
+
+Motsatsen till dymaisk sida kallas statisk sida.
+### 
+Att jobba med en statisk sida blir lätt problematiskt när man arbetar med flera produkter.
+
+Repitera HTML och CSS. CSS -> SASS
+```
+
+cd code
+mkdir te20-eleventy-intro
+cd te20-eleventy-intro 
+
+npm init -y
+npm install @11ty/eleventy
+
+git init
+touch .gitignore
+touch .index.html
+code . 
+```
+I filen gitrignore skiver vi nu in
+```
+node_modules
+public
+```
+
+
+Sedan skriver vi in i filen package.json
+```json
+"scrips":{
+  "start": "eleventy --serve"
+}
+```
+För att starta servern skriver vi in npm start i valfri terminal
+
+Skapa en fil med namnet eleventy.js. I den skriver vi sedan in
+```js
+module.exports = funktion(eleventyConfig){
+  
+  return {
+      dir: {
+        input: 'src',
+        output: 'public',
+      },
+  };
+};
+```
+Efter ändringar i eleventy måste servern startas om med
+```bash
+^C //ctrl+c
+npm start
+```
 
 # Tisdag 20/9
 Anteckningar: Noah
