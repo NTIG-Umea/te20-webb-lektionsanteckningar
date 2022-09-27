@@ -53,6 +53,12 @@ Efter ändringar i eleventy måste servern startas om med
 npm start
 ```
 
+Nu kan vi använda en mapp ```/src``` för att skapa filerna till systemet i.
+I den skapar vi en mapp som heter ```_includes```, i denna mapp kan vi skapa layout filer som 11ty använder.
+I ```includes``` skapa en fil med namnet ```base.njk```, denna fil kommer vara grundtemplaten för hela siten.
+
+Fortsättning finns i intro [repot](https://github.com/jensnti/te20-eleventy-intro)
+
 # Tisdag 20/9
 Anteckningar: Noah
 
