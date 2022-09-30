@@ -285,3 +285,147 @@ Tableplus
 
 ඞ Efter rast fixade vi id, namn, secret_identity och bio.
 Gör css och fixa index 👍
+
+# Fredag 09/30
+Antecknare : Kenth Emil Lukas Johansson den tredje
+## Dags att starta med en ny mapp och installera roliga 11ty yay!
+* Gör en ny mapp
+* Gå in i den nya mappen 
+* kör [npm init -y]
+* Installera 1tty med [npm i @11ty/eleventy]
+* Du kan kolla med hjälp av [la] över vad som är installerat
+(Dessa tre skapar filer)
+* Kör [mkdir src]
+* Kör [touch .eleventy.js]
+* Kör [touch .gitignore]
+* Öppna sedan VSS med [code .]
+## Dags för mycket rolig kod att börja funka
+
+* I filen .eleventy skirv :
+```js
+module.exports = function(eleventyConfig) {
+    return {
+        dir: {
+            input: "src",
+            output: "dist"
+        }
+    }
+};
+```
+
+* I package.json skriv under "test" (kom ihåg att det måste finnas ett "," bakom test linjen  > | "test": "echo \"Error: no test specified\" && exit 1",)
+```json
+"start": "eleventy --serve"
+```
+* Gör en index.md fil i mappen src (Skriv något roligt i den)
+* Gör en mapp i src vid namn [_includes] där skapar du ditt templat
+* I [_includes] mappen skapa en fil vid namn [base.njk]
+* Få in HTML:5 i filen 
+* I body skriv
+```html
+{{ content | safe}}
+```
+* På toppen av index.md skriv
+```njk
+---
+layout: base.njk
+title : Home
+---
+```
+* Du kan så klart skapa flera delar av sidan med helt enkelt skapa en till .md fil
+## Dags för att trycka in CSS i det hela
+* I terminalen gör [ctrl, c]
+* skriv [cd src]
+* skriv [mkdir css]
+* skriv cd ..
+* [Man måste starta om eleventy för att lägga till css]
+* I eleventy.js under moudle.exports skriv
+```js
+eleventyConfig.addPassthroughCopy("src/css")
+```
+* Skapa en style.css i din css mapp
+* I din style skriv 
+```html
+body {
+    max-width: min(80ch, 100vw - 1rem);
+    margin-inline: auto;
+}
+```
+* I din base.njk koppla din css som vanligt
+```html
+<link rel="stylesheet" href="/css/style.css">
+```
+## Hur man använder 11ty samt njk
+* Gör en [navigation.njk] i [_includes] filen
+* Nu skriva denna roliga kod i den :)
+```css
+<nav>
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/about">About</a>
+        </li>
+    </ul>
+</nav>
+```
+* I [base.njk] över content safe skriv
+```njk
+{% include "navigation.njk" %}
+```
+* I filen [style.css] ska vi lägga till mer nav så skriv
+
+```css
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+```
+* Skapa en ny mapp vid namn [_data] i src
+* I denna mapp skapa en fil vid namn [navigation.json]
+* I denna fil skriv
+```json
+[
+    {
+        "title": "Hem",
+        "url": "/"
+    },
+    {
+        "title": "Om",
+        "url": "/om/"
+    }
+]
+```
+* Ta bort all kod i [navigation.njk] och byt ut det till
+```css
+<nav>
+    <ul>
+    {% for item in navigation}    
+        <li>
+            <a href="{{ item.url }}">{{ item.title }}</a>
+        </li>    
+    </ul>
+</nav>
+```
+* Du kan även lägga till en bild med att skapa en ny mapp och lägga till den in i [.eleventy,js]
+
+```js
+module.exports = function(eleventyConfig) {
+    eleventyConfig.addPassthroughCopy("src/css")
+    eleventyConfig.addPassthroughCopy("src/images")
+    return {
+        dir: {
+            input: "src",
+            output: "dist"
+        }
+    }
+};
+``` 
+* Du kan nu lägga till bilden som normal in i [index.md]
+
+```md
+![Foul image](/images/img.jpg)
+```
